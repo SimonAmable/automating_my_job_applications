@@ -1,0 +1,22 @@
+Simon Amable
+613-413-5508, simonamable@gmail.com
+https://www.linkedin.com/in/simon-amable-59ab091ab/ || https://github.com/SimonAmable
+
+January 13th, 2023
+
+Bank of Canada
+Student, Web Development (9648)
+Ottawa, Ontario
+
+Dear Hiring Manager,
+
+This position was looking for someone enthusiastic about programming, eager to learn new technologies, and who has strong transferable problem-solving skills, so I wanted to give you a clear demonstration of why that is me by developing a completely automated program to get this application to you. I was so eager to get the position of Student Web Developer at the Bank of Canada that I decided to develop a range of scripts mainly using Python, Selenium, and Jenkins automating almost every single step of the application process on the Carleton Co-op site to facilitate getting you this application package to you, and to show how real my enthusiasm is for this role. More information about the project is available on my resume, GitHub, Linked-in, or hopefully in an interview with me. 
+
+Through my exceptionally strong academic performance in all computer science courses such as statistics, system programing, database management, and my personal favorite, web development. I have gained a solid foundation for programming in many languages such as Python, JavaScript, Java, C++, C and even more. My love for programming has led me to make an abundance of personal problem-solving projects such as my League of Legends Discord Bot, OPENAI integrations, various web applications, and many automations. These projects have shown my capabilities in creating efficient software, full-stack web development, unit testing, automated testing, automation, and scripting, along with various other technical skills that align me nearly perfectly with the qualifications for this role at the Bank of Canada. 
+
+I am confident that my passion for solving challenging problems, and my ability to work independently or within an agile development team like yours, make me an ideal fit for this role at the Bank of Canada. I truly admire the Bank of Canada’s dedication to providing a diverse and inclusive environment for all its employees, making your company even more attractive. I can't express how incredibly excited I am at the opportunity to gain hands-on experience and apply my knowledge to real-world projects the Bank of Canada.
+
+Thank you for considering my application. I am thrilled about the prospect of joining your team for as long as possible this Co-op and hopefully again after! I look forward to showcasing how my skills and enthusiasm make me the perfect candidate for this job.
+
+Sincerely, 
+Simon Amable.

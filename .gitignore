@@ -1,1 +1,8 @@
 .env
+ExternalApplications/
+FinishedCoverLetters/
+prospectJobs/
+TailoredCoverLetters/
+venv/
+coverletter.txt
+quickl.py

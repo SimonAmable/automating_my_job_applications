@@ -9,9 +9,69 @@ import os
 
 from docx2pdf import convert
 
-from addHyperlink import add_hyperlink
+#TODO make a function to bold a list of words from a paragraph
 
-files_directory=r"C:\Users\simon\Desktop\mycoolshit\SeleniumCoop\venvForSeleniumCoop\TailoredCoverLetters3"
+# Credit for add_hyperlink & get_or_create_hyperlink_style : https://stackoverflow.com/questions/47666642/adding-an-hyperlink-in-msword-by-using-python-docx
+
+def add_hyperlink(paragraph, text, url):
+    # This gets access to the document.xml.rels file and gets a new relation id value
+    part = paragraph.part
+    r_id = part.relate_to(url, docx.opc.constants.RELATIONSHIP_TYPE.HYPERLINK, is_external=True)
+
+    # Create the w:hyperlink tag and add needed values
+    hyperlink = docx.oxml.shared.OxmlElement('w:hyperlink')
+    hyperlink.set(docx.oxml.shared.qn('r:id'), r_id, )
+
+    # Create a new run object (a wrapper over a 'w:r' element)
+    new_run = docx.text.run.Run(
+        docx.oxml.shared.OxmlElement('w:r'), paragraph)
+    new_run.text = text
+
+    # Set the run's style to the builtin hyperlink style, defining it if necessary
+    new_run.style = get_or_create_hyperlink_style(part.document)
+    # Alternatively, set the run's formatting explicitly
+    # new_run.font.color.rgb = docx.shared.RGBColor(0, 0, 255)
+    # new_run.font.underline = True
+
+    # Join all the xml elements together
+    hyperlink.append(new_run._element)
+    paragraph._p.append(hyperlink)
+    return hyperlink
+
+
+def get_or_create_hyperlink_style(d):
+    """If this document had no hyperlinks so far, the builtin
+       Hyperlink style will likely be missing and we need to add it.
+       There's no predefined value, different Word versions
+       define it differently.
+       This version is how Word 2019 defines it in the
+       default theme, excluding a theme reference.
+    """
+    if "Hyperlink" not in d.styles:
+        if "Default Character Font" not in d.styles:
+            ds = d.styles.add_style("Default Character Font",
+                                    docx.enum.style.WD_STYLE_TYPE.CHARACTER,
+                                    True)
+            ds.element.set(docx.oxml.shared.qn('w:default'), "1")
+            ds.priority = 1
+            ds.hidden = True
+            ds.unhide_when_used = True
+            del ds
+        hs = d.styles.add_style("Hyperlink",
+                                docx.enum.style.WD_STYLE_TYPE.CHARACTER,
+                                True)
+        hs.base_style = d.styles["Default Character Font"]
+        hs.unhide_when_used = True
+        hs.font.color.rgb = docx.shared.RGBColor(0x05, 0x63, 0xC1)
+        hs.font.underline = True
+        del hs
+
+    return "Hyperlink"
+
+
+
+
+files_directory="TailoredCoverLetters"
 # paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
 allTxtFiles=os.listdir(files_directory)
 new_txt_file_list = [filename.replace(".txt", "") for filename in allTxtFiles] 
@@ -28,10 +88,12 @@ desc=""#declare decs variable for body of cover letter
 
 for eachFile in os.listdir(files_directory):
     # Construct the full path to each file using os.path.join
+#
+
     jobTitle=eachFile.replace(".txt","")
-    print("Job Title:")
+    print(f"Job Title:{jobTitle}")
     eFile=os.path.join(files_directory,eachFile)
-    with open(eFile,"r") as file:
+    with open(eFile,"r", encoding='utf-8') as file: #errors='ignore'
         for line_number,line in enumerate(file, 1):  #enumerare just indexs the text document line by line so we can organize it from that
             #organize line by line # user range loop, assumes all files are same length tho
             print(f"Line {line_number}: {line.strip()}")  # Stripping newline characters for better output
@@ -142,12 +204,15 @@ for eachFile in os.listdir(files_directory):
 
 
     #construct output file path and log in terminal
-    output_directory2 = r"C:\Users\simon\Desktop\mycoolshit\SeleniumCoop\venvForSeleniumCoop\FinishedCoverLetters4"
+    output_directory = "FinishedCoverLetters"
     #jobTitle=jobTitle.replace(' ', '_').replace('/', '').strip('\n')
+
+    os.makedirs(output_directory, exist_ok=True)  # Ensure the directory exists
+
     print ("job title: "+jobTitle)
     output_filename2 = jobTitle.replace("modified_", "") + ".docx"
     
-    output_filepath2 = os.path.join(output_directory2, output_filename2)
+    output_filepath2 = os.path.join(output_directory, output_filename2)
     print ("saving file to: " +output_filepath2)
     document.save(output_filepath2)
     
@@ -171,4 +236,22 @@ for eachFile in os.listdir(files_directory):
 
 
 from docx2pdf import convert#convert files to pdf
-convert(output_directory2)
+
+
+
+
+    #pdf_output_path = os.path.join(output_directory2, (output_filename2.replace(".docx", ".pdf").replace("modified_","")  ) )
+
+    
+
+     
+    #make document create a function, take in the name for the and file path?
+# def main():
+
+#     cover_letter_from_prospect_job_txt()
+
+# if __name__=="__main__":
+#     main()
+output_directory = "FinishedCoverLetters"
+
+convert(output_directory)
