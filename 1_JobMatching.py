@@ -15,8 +15,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
 # Load login credentials from .env file, make sure to pip install python-dotenv
-from dotenv import load_dotenv
-load_dotenv()
+from dotenv import find_dotenv,load_dotenv
+load_dotenv(find_dotenv())
 
 
 

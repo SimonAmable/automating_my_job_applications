@@ -252,6 +252,6 @@ from docx2pdf import convert#convert files to pdf
 
 # if __name__=="__main__":
 #     main()
-output_directory = "FinishedCoverLetters"
 
+output_directory = "FinishedCoverLetters"
 convert(output_directory)

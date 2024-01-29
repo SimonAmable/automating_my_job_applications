@@ -16,15 +16,14 @@ from selenium.common.exceptions import TimeoutException
 
 
 # Load login credentials from .env file, make sure to pip install python-dotenv
-from dotenv import load_dotenv
-load_dotenv()
+from dotenv import find_dotenv,load_dotenv
+load_dotenv(find_dotenv())
 #put your own login credentials in the .env file 
 #the 4 gloabal variables im this program that may need customization
 myUsername = os.getenv("MY_USERNAME")
 myPassword = os.getenv("MY_PASSWORD")
 #regexPattern=r'\b(?:software|automate|web|a)\b' #
-
-# DIRECTORY CONTAINING COVER LETTER FILES
+# DIRECTORY CONTAINING FINISHED COVER LETTER FILES
 finished_file_directory = "FinishedCoverLetters"
 
 
@@ -164,7 +163,10 @@ def upload_cover_letter(driver, job_name, finished_file_directory):
 
     time.sleep(3)
 
-
+def handle_nokia_page(driver):
+    #TODO you better beleive im getting the job
+    driver.find_element()
+    print("nokia page handles and closed")
 
 
 
