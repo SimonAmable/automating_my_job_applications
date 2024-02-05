@@ -27,10 +27,13 @@ myPassword = os.getenv("MY_PASSWORD")
 regexPattern=r'\b(?:devOPS|auto|Automation|java|web development|python|javascript)\b' #
 #more user facing approad with input
 def InputInfo():
-    username=input("Please enter your Carleton username")
-    password=input("Please enter your Carleton username")
-    regexInput=input("Please enter the full regex expression you would like to use (do not include quotes ex. \")")
-    return [username,password,regexInput]
+    myUsername = os.environ.get('MY_USERNAME')
+    myPassword = os.environ.get('MY_PASSWORD')
+    regexPattern = os.environ.get('OPEN_AI_API_KEY')
+    #username=input("Please enter your Carleton username")
+    #password=input("Please enter your Carleton username")
+    #regexInput=input("Please enter the full regex expression you would like to use (do not include quotes ex. \")")
+    return [myUsername,myPassword,regexPattern]
 
 def JobToID(job_position:str)->str:
     invalid_chars = set('/\\?%*:|"<>')#CREATE A SET FOR THE BAD WINDOWS FILE NAME CHARACTER
