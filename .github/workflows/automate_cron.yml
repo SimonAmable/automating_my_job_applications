@@ -1,0 +1,32 @@
+name: Python Script
+
+on:
+  - push
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    
+    env:
+      MY_USERNAME: ${{ secrets.ENV_USERNAME_MYSUCCESS }}
+      MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+      OPEN_AI_API_KEY: ${{ secrets.OPEN_AI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      # You can test your matrix by printing the current Python version
+      
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+        
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          
+      - name: Run script
+        run: python 1_JobMatching.py $ENV_USERNAME_MYSUCCESS $MY_PASSWORD $OPEN_AI_API_KEY
