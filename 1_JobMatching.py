@@ -22,8 +22,8 @@ load_dotenv(find_dotenv())
 
 #put your own login credentials in the .env file 
 #the 3 gloabal variables im this program that need customization
-myUsername = os.getenv("MY_USERNAME")
-myPassword = os.getenv("MY_PASSWORD")
+#myUsername = os.getenv("MY_USERNAME")
+#myPassword = os.getenv("MY_PASSWORD")
 regexPattern=r'\b(?:devOPS|auto|Automation|java|web development|python|javascript)\b' #
 #more user facing approad with input
 def InputInfo():
