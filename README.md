@@ -3,7 +3,7 @@
 - Automating THE ENTIRE job applicaciton proccess on Carleton MySuccess with python, Selenium, and github actions.
 - 1_JobMatching.py : This script will scape  all jobs on the MySuccess Coop board and extract all jobs matching a regex search into the directory "prospectJobs" for later use.
 - 2_CoverLetterCustomization.py : This script uses the OPENAI api to resplace company name and job position in my cover letter. #Promt can be changed to anything.
-- 3_MicrosoftWordTailoring.py : This script uses the files from "TailoredCoverLetters" direcotry and outouts well typed/formated word documents, and their pdf counterparts into the  "FinishedCoverLetters" directory 
+- 3_CustomizeWordDocuments.py : This script uses the files from "TailoredCoverLetters" direcotry and outouts well typed/formated word documents, and their pdf counterparts into the  "FinishedCoverLetters" directory 
 - 4_AutoApply.py  : This scirpt uses the finshed pdf cover letter in the "FinishedCoverLetters" directory and goes through all jobs on the coop board to find matching positions so that the file can be uploaded and the application package send. Edge cases where private comapny site was needed for registration handled manually, currenly Private application pages go into the "ExternalApplicaiton" directory 
 
 variables to customize:
