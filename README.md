@@ -11,7 +11,7 @@ variables to customize:
 - MY_USERNAME (.env)
 - MY_PASSWORD (.env)
 - OPEN_AI_API_KEY (.env)
-- coverLetter.txt    (#the cover letter to be customized 
+- coverLetter.txt    (# your own cover letter)
 
 Features:
 - Automated login to university portal
