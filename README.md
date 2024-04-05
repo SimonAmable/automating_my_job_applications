@@ -1,8 +1,8 @@
 ﻿# Automate-The-Job
 # AutomateYourJobSearch
-Automating THE ENTIRE job applicaciton proccess on Carleton MySuccess with python, Selenium, and github actions.
+Automating THE ENTIRE job applicaciton proccess on Carleton MySuccess with python, Selenium, OPENAI, and a few other libraries.
 
-Inspiration/motivation:
+Inspiration/Motivation:
 - I was overwhelmed with the number of jobs listings avalible on the coop board at the start of this term and needed a solution. While suffering from too much imposter syndrome for me to send job applications efficiently i decided to code this instead.
 -  These 4 scripts will select your jobs based on keyword matching with regex, create custom cover letters, and of course apply to them!
 - Hopefully other people with the same struggle can get some use out of this
