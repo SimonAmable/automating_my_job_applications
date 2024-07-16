@@ -35,7 +35,7 @@
 - python -m venv venv               # or python3, depending on your setup
 - venv/bin/activate                 # or activate.bat on Windows
 - pip install -r requirements.txt 
-# Make sure you create a .env file with your information and can start with: 1_JobMatching.py
+Make sure you create a .env file with your information and can start with: 1_JobMatching.py
 
 
 ## Dependencies:
