@@ -61,8 +61,7 @@
 
 ## Contributing:
 Contributions are more that welcome! Feel free to open issues, submit pull requests, or suggest enhancements to make this tool more effective and user-friendly.
-  -neccasary improvements:
-    - fix jobs page navigation to scrapper each page (currently only does first 100 listing on page 1 of job board)
-    - 
 
+## Disclaimer:
+This tool, Auto_Jobs_Applier_AIHawk, is intended for use at your own risk. The creators / maintainers / contributors assume no responsibility for any consequences arising from its use. Users are advised to comply with the terms of service of relevant platforms and adhere to all applicable laws, regulations, and ethical guidelines. The use of automated tools for job applications may carry risks, including potential impacts on user accounts. Proceed with caution and at your own discretion.
 
