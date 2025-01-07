@@ -58,6 +58,8 @@
   - regexPattern is a gloabal variable that will be used to file matching jobs
   - DO NOT OVER RELY ON GPT + doc formating without testing because gpt is not that good 
 
+## TODO/ Feature roadmap
+- The great refactor of 2025
 
 ## Contributing:
 Contributions are more that welcome! Feel free to open issues, submit pull requests, or suggest enhancements to make this tool more effective and user-friendly.
