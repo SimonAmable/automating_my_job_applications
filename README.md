@@ -1,6 +1,6 @@
 # THIS PROJECT IS DEPRECIATED
-(it still works but the new version is much more user friendly and you were probably lookinf for it, Here is the link : (https://github.com/SimonAmable/MySuccessAutomation)[https://github.com/SimonAmable/MySuccessAutomation]
- # UPDATED VERSION : (https://github.com/SimonAmable/MySuccessAutomation)[https://github.com/SimonAmable/MySuccessAutomation]
+(it still works but the new version is much more user friendly and you were probably lookinf for it, Here is the link : https://github.com/SimonAmable/MySuccessAutomation
+ # UPDATED VERSION : [https://github.com/SimonAmable/MySuccessAutomation
  # Automate-The-Job
 
 ## Automating THE ENTIRE job applicaciton proccess on Carleton MySuccess with python, Selenium, OPENAI, and a few other libraries.
