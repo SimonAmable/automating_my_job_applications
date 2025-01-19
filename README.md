@@ -1,5 +1,5 @@
 # THIS PROJECT IS DEPRECIATED
-(it still works but the new version is much more user friendly and you were probably lookinf for it, Here is the link : https://github.com/SimonAmable/MySuccessAutomation
+(it still works but the new version is much more user friendly and you were probably looking for it anyways, Here is the link : https://github.com/SimonAmable/MySuccessAutomation
  # UPDATED VERSION : [https://github.com/SimonAmable/MySuccessAutomation
  # Automate-The-Job
 
